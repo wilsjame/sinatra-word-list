@@ -1,0 +1,13 @@
+<p>
+<a href="/">&laquo; Back</a>
+</p>
+<h1>Words</h1>
+<form action="/words" method="POST">
+  <strong>New Word:</strong>
+  <input type="text" name="word" placeholder="word">
+  <input type="text" name="meaning" placeholder="meaning">
+  <input type="submit" value="Save">
+</form>
+<% @words.each do |line| %>
+  <p><%= line %></p>
+<% end %>
