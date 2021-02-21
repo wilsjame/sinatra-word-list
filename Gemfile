@@ -4,5 +4,7 @@ gem 'sinatra', '>=2.1.0'
 gem 'sinatra-contrib', '>=2.1.0'
 gem 'rack', '>=2.2.3'
 gem 'thin', '>=1.8.0'
+gem 'sinatra-activerecord', require: 'sinatra/activerecord'
 gem 'sqlite3', '>=1.4.2'
+gem 'rake'
 

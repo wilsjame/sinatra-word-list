@@ -9,6 +9,8 @@ Bundler.require(:default)
 
 require "sinatra/reloader" if development?
 
+set :database, {adapter: "sqlite3", database: "db/development.sqlite3"}
+
 # define a route for the root of the site
 get '/' do
   # render the views/index.erb template
