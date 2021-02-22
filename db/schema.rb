@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_21_074602) do
+ActiveRecord::Schema.define(version: 2021_02_22_012408) do
 
-  create_table "words", force: :cascade do |t|
+  create_table "word_items", force: :cascade do |t|
     t.string "name"
-    t.string "description"
+    t.string "meaning"
   end
 
 end
