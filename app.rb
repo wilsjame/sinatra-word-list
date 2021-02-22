@@ -34,3 +34,10 @@ post '/words' do
   # render the views/words.erb template
   erb :words
 end
+
+# for testing
+get '/words-all-gone' do
+  WordItem.destroy_all
+  @words = WordItem.all
+  erb :words
+end
