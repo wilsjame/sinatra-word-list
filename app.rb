@@ -8,6 +8,8 @@ require 'bundler/setup'
 Bundler.require(:default)
 
 require "sinatra/reloader" if development?
+# make WordItem class available to query word_items table in the database
+require './models/WordItem'
 
 set :database, {adapter: "sqlite3", database: "db/development.sqlite3"}
 
