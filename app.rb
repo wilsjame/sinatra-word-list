@@ -1,4 +1,4 @@
-# app.rb is a simple 
+# app.rb is a simple
 # word list Sinatra app
 
 # use bundler
@@ -20,23 +20,17 @@ get '/' do
 end
 
 get '/words' do
-  # store the word list as an instance variable to be shown by the view
-  File.open("words.txt", "a+") do |f|
-    @words = f.readlines
-  end
+  # return a collection with all words
+  @words = WordItem.all
   # render the views/words.erb template
   erb :words
 end
 
 post '/words' do
-  # append the user's submitted form data to the word list
-  File.open("words.txt", "a+") do |f|
-    f.puts "#{params[:word]} - #{params[:meaning]}"
-  end
-  # store the word list as an instance variable to be shown by the view
-  File.open("words.txt", "a+") do |f|
-    @words = f.readlines
-  end
+  # add a new item to the database
+  WordItem.create(name: params[:word], meaning: params[:meaning])
+  # return a collection with all words
+  @words = WordItem.all
   # render the views/words.erb template
   erb :words
 end

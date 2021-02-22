@@ -8,6 +8,6 @@
   <input type="text" name="meaning" placeholder="meaning">
   <input type="submit" value="Save">
 </form>
-<% @words.each do |line| %>
-  <p><%= line %></p>
+<% @words.each do |item| %>
+  <p><%= item.name %> - <%= item.meaning %></p>
 <% end %>

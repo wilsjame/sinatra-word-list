@@ -1,3 +1,3 @@
-class Word < ActiveRecord::Base
+class WordItem < ActiveRecord::Base
   validates_presence_of :name
 end
